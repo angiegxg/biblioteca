@@ -11,7 +11,7 @@ let initialState = {
         
         return {
           ...state,
-          allBooks: [...state.allBooks, action.payload],
+          allBooks: action.payload,
           disponibilityBooks:  action.payload
         };
       case "ADD_TOREAD":
@@ -24,6 +24,20 @@ let initialState = {
           ...state,
           toRead: state.toRead.filter((book) => book.ISBN !== action.payload)
         };
+ case "FILTER":
+  if(action.payload=="all"){
+    return{
+      ...state,
+      disponibilityBooks: state.allBooks
+          }
+  }else {
+    return{
+      ...state,
+      disponibilityBooks: state.allBooks.filter((book)=>book.genre === action.payload )
+    }
+
+  }
+
       default:
         return state;
     }
