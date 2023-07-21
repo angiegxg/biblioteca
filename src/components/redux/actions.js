@@ -10,7 +10,7 @@ export const LOCAL_PERSIST = "LOCAL_PERSIST"// persistencia pestañas
 
 export function getBooks(){
     const books=data.library.map((book)=>book.book)
-    console.log(books)
+    
     return{
         type:GET_BOOKS,
         payload:books
@@ -18,6 +18,7 @@ export function getBooks(){
 }
 
 export function addToRead(book) {
+    console.log("action", book)
     return {
         type: ADD_TOREAD,
         payload: book
@@ -25,10 +26,10 @@ export function addToRead(book) {
 
 }
 
-export function removeToRead(id) {
+export function removeToRead(book) {
     return{
         type:REMOVE_TOREAD,
-        payload: id
+        payload: book
     }
     
 }

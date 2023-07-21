@@ -1,35 +1,29 @@
 import React from 'react'
 import './Book.modules.css'
+import { addToRead, removeToRead } from '../redux/actions'
+import { useDispatch, useSelector } from 'react-redux'
 
 function Book({ book }) {
+  const dispatch = useDispatch();
+  const toRead = useSelector(state => state.toRead);
+
+  function handlerRead(book) {
+    if (toRead.some((item) => item.ISBN === book.ISBN)) {
+      dispatch(removeToRead(book));
+    } else {
+      dispatch(addToRead(book));
+    }
+  }
 
   return (
     <div className='card'>
-      <img src={book.cover}></img>
+      <img src={book.cover} alt="Book Cover" />
       <p> {book.genre} </p>
-      <a>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <circle cx="12" cy="12" r="10" />
-          <path d="M12 8v8M8 12h8" />
-        </svg></a>
-
-
-
-
-
-
+      <button onClick={() => handlerRead(book)}>
+        {toRead.some((item) => item.ISBN === book.ISBN) ? 'x' : '+'}
+      </button>
     </div>
   )
 }
 
-export default Book
+export default Book;

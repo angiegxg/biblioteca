@@ -14,18 +14,32 @@ let initialState = {
           allBooks: action.payload,
           disponibilityBooks:  action.payload
         };
-      case "ADD_TOREAD":
+        case "ADD_TOREAD":
+          console.log("reducer",action.payload)
         return {
           ...state,
-          toRead: [...state.toRead, action.payload]
+          toRead: [...state.toRead, action.payload],
+          disponibilityBooks: state.disponibilityBooks.filter((book) => book.ISBN !== action.payload.ISBN),
+           
         };
-      case "REMOVE_TOREAD":
-        return {
-          ...state,
-          toRead: state.toRead.filter((book) => book.ISBN !== action.payload)
-        };
+        case "REMOVE_TOREAD":
+          return {
+            ...state,
+            disponibilityBooks: [...state.disponibilityBooks, action.payload],
+            toRead: state.toRead.filter((book) => book.ISBN !== action.payload.ISBN)
+          };
+      // case "ADD_TOREAD":
+      //   return {
+      //     ...state,
+      //     toRead: [...state.toRead, action.payload]
+      //   };
+      // case "REMOVE_TOREAD":
+      //   return {
+      //     ...state,
+      //     toRead: state.toRead.filter((book) => book.ISBN !== action.payload)
+      //   };
  case "FILTER":
-  if(action.payload=="all"){
+  if(action.payload==="all"){
     return{
       ...state,
       disponibilityBooks: state.allBooks

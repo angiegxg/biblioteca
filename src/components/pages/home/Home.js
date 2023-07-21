@@ -5,6 +5,7 @@ import { getBooks } from '../../redux/actions'
 
 function Home() {
 const books= useSelector(state=>state.disponibilityBooks)
+const toRead = useSelector(state=>state.toRead)
 const dispatch= useDispatch()
 
 
@@ -13,7 +14,8 @@ useEffect(()=>{dispatch(getBooks())}, [])
 
   return (
     <div>
-        <BooksList books= {books} />
+        <BooksList books= {books} toRead= {toRead} />
+        
     </div>
   )
 }

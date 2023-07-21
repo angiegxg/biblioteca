@@ -1,16 +1,22 @@
-import React from 'react'
-import Book from '../Book/Book'
-import './BooksDisponibility.modules.css'
-import FilterGenre from '../filterGenre/FilterGenre'
+import React from 'react';
+import Book from '../Book/Book';
+import './BooksDisponibility.modules.css';
+import FilterGenre from '../filterGenre/FilterGenre';
+import { useSelector } from 'react-redux';
 
-function BooksDisponibility({books}) {
- 
+function BooksDisponibility({ books }) {
+  const toRead = useSelector((state) => state.toRead);
+
+  // Filtrar los libros que no están en la lista de lectura
+  const availableBooks = books.filter((book) => !toRead.some((item) => item.ISBN === book.ISBN));
+
   return (
     <div className='container'>
-      <FilterGenre/>
-      {books.map((book) => <Book key={book.ISBN} book={book} />)}
+      <FilterGenre />
+      {availableBooks.map((book) => <Book key={book.ISBN} book={book} />)}
     </div>
-  )
+  );
 }
 
-export default BooksDisponibility
+export default BooksDisponibility;
+

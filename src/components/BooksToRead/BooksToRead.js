@@ -1,10 +1,12 @@
 import React from 'react'
 import Book from '../Book/Book'
+import './BooksToRead.modules.css'
 
-function BooksToRead({books}) {
+function BooksToRead({toRead}) {
+  console.log("book to read", toRead)
   return (
-    <div>
-     {books.map((book)=>{<Book book= {book} />})} 
+    <div className=''>
+     {toRead.map((book)=><Book book= {book} />)} 
     </div>
   )
 }
