@@ -17,7 +17,11 @@ function Book({ book }) {
 
   return (
     <div className='card'>
-      <img src={book.cover} alt="Book Cover" />
+      <div className='divImgBook'>
+
+      <img className='imgBook' src={book.cover} alt={book.title}/>
+      </div>
+      
       <p> {book.genre} </p>
       <button onClick={() => handlerRead(book)}>
         {toRead.some((item) => item.ISBN === book.ISBN) ? 'x' : '+'}

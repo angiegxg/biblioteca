@@ -1,6 +1,6 @@
 let initialState = {
     allBooks: [],
-    disponibilityBooks: [], // Cambiar el nombre de la propiedad
+    disponibilityBooks: [], 
     toRead: [],
     filter: []
   };

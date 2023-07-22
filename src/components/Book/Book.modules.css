@@ -1,21 +1,41 @@
 .card{
     width: 300px;
     height: 400px;
-    padding: 20px;
+    padding: 40px ;
     border-radius: 10px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: aquamarine;
-}
-
-.card img{
-    width: auto;
-    height: 300px;
-
-    object-fit: contain;
+    background: url('../../../public/book1.png') no-repeat center/cover;
+    position: relative;
     
-    margin-bottom: 10px;
+    
 }
+
+.divImgBook{
+    position: relative;
+    border: 10px solid transparent; 
+    border-image: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%) 1;
+    
+    
+
+}
+
+.imgBook{
+    width: auto;
+    height: 250px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    align-self: center;
+    /* border: 10px solid #ffd700;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) */
+    
+}
+
+
+
+
+
+

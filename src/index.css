@@ -1,16 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family=Pontano+Sans:wght@300&display=swap');
+
+h1,h2,h3{
+  font-family: 'Lobster Two', cursive;
+}
+
+p,select,div,input{
+  font-family: 'Pontano Sans', sans-serif;
+}
 body {
   margin: 0;
-  font-family:  'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  
+    background: url('../public/OLD_PAPER_TEXTURE.jpg') no-repeat center/cover;
    
  
 }
 
-code {
-  font-family: 'Courier New',
-    monospace;
-}
+
 
 *{
   margin: 0;

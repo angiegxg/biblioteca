@@ -3,6 +3,7 @@ import Book from '../Book/Book';
 import './BooksDisponibility.modules.css';
 import FilterGenre from '../filterGenre/FilterGenre';
 import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
 
 function BooksDisponibility({ books }) {
   const toRead = useSelector((state) => state.toRead);
@@ -12,7 +13,10 @@ function BooksDisponibility({ books }) {
 
   return (
     <div className='container'>
+      <div className='header'>
+      <h1>Libros Disponibles</h1>
       <FilterGenre />
+      </div>
       {availableBooks.map((book) => <Book key={book.ISBN} book={book} />)}
     </div>
   );

@@ -10,3 +10,10 @@
     position: relative;
     box-sizing: border-box;
 }
+
+.header{
+    display: block;
+    width: 100%;
+    text-align: center;
+    
+}
