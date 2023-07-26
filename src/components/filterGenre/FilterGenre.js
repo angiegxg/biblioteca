@@ -1,25 +1,32 @@
-import React from 'react'
-import { useDispatch } from 'react-redux'
-import { filterBooks } from '../redux/actions'
-import './FilterGenre.modules.css'
+
+
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { filterBooks } from '../redux/actions';
+import './FilterGenre.modules.css';
 
 function FilterGenre() {
-const genre=["Fantasía","Ciencia ficción","Zombies","Terror"]
+  // Lista de géneros disponibles
+  const genres = ["Fantasía", "Ciencia ficción", "Zombies", "Terror"];
 
-const dispatch=useDispatch()
+  // Utilizamos useDispatch para acceder a la función dispatch de Redux
+  const dispatch = useDispatch();
 
-function handlerFilter (e){
-    dispatch(filterBooks(e.target.value))
-}
+  // Función handlerFilter para filtrar libros por género
+  function handlerFilter(e) {
+    dispatch(filterBooks(e.target.value));
+  }
 
   return (
     <div>
-        <select  className='mi-select' placeholder='Genero' onChange={handlerFilter}>
+      {/* Selector para filtrar libros por género */}
+      <select className='mi-select' placeholder='Género' onChange={handlerFilter}>
         <option value='all'>Mostrar todos</option>
-            {genre.map((genre)=><option value={genre}> {genre} </option>)}
-        </select>
+        {/* Renderizamos cada opción de género */}
+        {genres.map((genre) => <option key={genre} value={genre}>{genre}</option>)}
+      </select>
     </div>
-  )
+  );
 }
 
-export default FilterGenre
+export default FilterGenre;

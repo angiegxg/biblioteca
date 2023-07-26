@@ -7,7 +7,7 @@ export const GET_BOOKS = "GET_BOOKS";
 export const ADD_TOREAD = "ADD_TOREAD";
 export const REMOVE_TOREAD = "REMOVE_TOREAD";
 export const FILTER = "FILTER";
-export const ORDER = "ORDER";
+
 export const FILTER_PAGES = "FILTER_PAGES";
 
 // Acción para obtener la lista de libros
@@ -47,13 +47,9 @@ export function filterBooks(genre) {
     };
 }
 
-// Acción para ordenar la lista de libros "Para leer"
-export function orderToRead(order) {
-    return {
-        type: ORDER,
-        payload: order
-    };
-}
+
+
+
 
 // Acción para filtrar libros por cantidad de páginas
 export function filterPages(pages) {
