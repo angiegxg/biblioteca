@@ -5,7 +5,6 @@ let initialState = {
   allBooks: [],
   disponibilityBooks: [], 
   toRead: [],
-  
   counterToRead: 0,
   counterDisp: 0,
   pages: 0
