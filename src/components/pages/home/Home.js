@@ -10,7 +10,10 @@ const dispatch= useDispatch()
 
 
 
-useEffect(()=>{dispatch(getBooks())}, [])
+useEffect(() => {
+  dispatch(getBooks());
+}, [dispatch]);
+
 
   return (
     <div>
