@@ -10,7 +10,8 @@ p,select,div,input{
 body {
   margin: 0;
   
-    background: url('../public/OLD_PAPER_TEXTURE.jpg') no-repeat center/cover;
+  /* background: linear-gradient(to bottom, transparent 0.05%, #D8B08C 97%), url('../public/texturebook.jpg') no-repeat center/cover; */
+
    
  
 }

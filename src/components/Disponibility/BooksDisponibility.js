@@ -24,8 +24,10 @@ function BooksDisponibility({ books }) {
       <div className="header">
         <h1>Libros Disponibles</h1>
         <h2>{counterDisp} en disponibles</h2>
-        <FilterGenre />
+        <div className="filter">
         <FilterPages />
+        <FilterGenre />
+        </div>
       </div>
       {/* Renderizamos cada libro disponible utilizando el componente Book */}
       {availableBooks.map((book) => (

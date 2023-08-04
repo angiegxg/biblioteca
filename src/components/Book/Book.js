@@ -25,7 +25,7 @@ function Book({ book }) {
         <img className="imgBook" src={book.cover} alt={book.title} />
       </div>
 
-      <p>{book.genre}</p>
+      <p className="div-ribbon">{book.genre}</p>
       {/* Botón para añadir o eliminar el libro de la lista de "Para leer" */}
       <button onClick={() => handlerRead(book)}>
         {/* Mostramos un icono de "+" si el libro no está en la lista, o una "x" si ya está */}

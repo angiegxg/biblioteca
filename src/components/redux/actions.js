@@ -23,7 +23,7 @@ export function getBooks() {
 
 // Acción para añadir un libro a la lista de "Para leer"
 export function addToRead(book) {
-    console.log("action", book); // Mensaje de depuración para verificar el libro que se está agregando
+   
 
     return {
         type: ADD_TOREAD,

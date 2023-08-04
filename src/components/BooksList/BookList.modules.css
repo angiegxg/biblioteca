@@ -1,10 +1,35 @@
 .viewList{
     display: grid;
     align-items: start;
+    grid-template-columns: 1fr;
     
 }
-.oc{
-   display: none;
+
+.div-title{
+   
+   width: 100vw;
+   mask: url('/public/papelrasgado.png');
+   mask-position: top;
+  mask-size: 100% 90%;
+  mask-repeat: no-repeat;
+  height: auto;
+  padding-bottom: 50px;
+  filter: drop-shadow(2px 2px 5px #662400);
+}
+
+.title{
+   
+   align-items: center;
+   padding-bottom: 35px;
+   background:linear-gradient(to top, #ff6a1a79,#b33f0081 ), url('https://c.pxhere.com/photos/8a/15/news_matrimonial_news_paper_marriage_business_bride_groom_job-602904.jpg!d') center/cover;
+   font-size: 7rem;
+   text-align: center;
+   
+   /* mask: conic-gradient(from -45deg at bottom,#0000,#000 1deg 90deg,#0000 91deg) 50% / 60px 100%; */
+   /* -webkit-text-stroke: 0.5px #B33F00; */
+   color: whitesmoke;
+   text-shadow: 2px 2px 3px #000000;
+
 }
 
 
@@ -12,9 +37,10 @@
 
 @media only screen and (min-width:600px){
    .viewList{
-    grid-template-columns: 1fr 1fr;
-    gap:10px
+    display: flex;
    } 
+
+   
 
  
 }

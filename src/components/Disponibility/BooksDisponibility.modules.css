@@ -12,9 +12,37 @@
     
 }
 
+
+
 .header{
     display: block;
     width: 100%;
     text-align: center;
     
+}
+
+
+
+@media only screen and (min-width:600px){
+    .filter{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .headerRead{
+        margin-bottom: 38px;
+     }
+
+     .mask{
+        mask: url('/public/toReadmask.png');
+       mask-position: center;
+      mask-size: 90% 100%;
+      mask-repeat: no-repeat;
+      
+    }
+    .containerRead{
+    
+        background:linear-gradient(to top, #ff6a1a79,#b33f0081 ), url('https://c.pxhere.com/photos/8a/15/news_matrimonial_news_paper_marriage_business_bride_groom_job-602904.jpg!d') center/cover;
+        color: whitesmoke;
+   text-shadow: 2px 2px 3px #000000;
+    }
 }

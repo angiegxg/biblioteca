@@ -24,8 +24,7 @@ export const reducer = (state = initialState, action) => {
       };
 
     case "ADD_TOREAD":
-      // Acción para añadir un libro a la lista de "Para leer"
-      console.log("reducer", action.payload); // Mensaje de depuración para verificar el libro que se está agregando
+      
       return {
         ...state,
         toRead: [...state.toRead, action.payload],
@@ -35,6 +34,7 @@ export const reducer = (state = initialState, action) => {
       };
 
     case "REMOVE_TOREAD":
+      
       // Acción para eliminar un libro de la lista de "Para leer"
       return {
         ...state,
