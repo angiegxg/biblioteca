@@ -22,5 +22,8 @@ Para este proyecto se han tenido en cuenta los siguientes requisitos:
 # Uso 
 
 Una vez que la aplicación esté en funcionamiento, podrás explorar la lista completa de libros disponibles, podras buscar filtrar los libros por genero y cantidad de paginas
+![screenShot](https://github.com/angiegxg/biblioteca/blob/master/public/biblioteca1.png)
 
 Puedes agregar libros a la lista de lectura dando clic en el boton +, del mismo modo podras elimanrlos de la lista de lectura.
+![screenShot](https://github.com/angiegxg/biblioteca/blob/master/public/biblioteca2.png)
+
