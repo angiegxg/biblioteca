@@ -1,13 +1,8 @@
+https://acortar.link/N5YmW3
+
 # Contexto
-Somos un sello editorial de libros multinacional. Queremos ofrecer a nuestro público una forma de ver nuestro catálogo y poder guardar los libros que les interesan en una lista de lectura.
-
-Para ello, queremos desarrollar una aplicación web que permita a los usuarios ver los libros disponibles y crear una lista de lectura. Ten en cuenta que:
-
-No sabemos si el framework que utilicemos ahora será el definitivo, pero querremos reutilizar el máximo de código posible.
-La aplicación debe ser fácil de usar y agradable a la vista.
-Tenemos un 80% de usuarios que vienen de navegadores de escritorio.
-Usa el archivo books.json para obtener los datos de los libros. Puedes añadir más libros si lo deseas, siempre y cuando siga la misma estructura.
-
+Un sello editorial de libros multinacional. Quierr ofrecer a su público una forma de ver su catálogo y poder guardar los libros que les interesan en una lista de lectura.
+Usando el archivo books.json para obtener los datos de los libros, se desarrolla una aplicación teniendo en cuenta los requisitos de funcionalidad siguientes:
 
 # Funcionalidad
 Para este proyecto se han tenido en cuenta los siguientes requisitos:
